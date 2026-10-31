@@ -50,3 +50,28 @@ user_input = input("원하는 동작을 입력하세요")
 
 if user_input == "1":
     print("게임을 시작합니다.")
+elif user_input == "2":
+    print("랭킹 확인")
+elif user_input == "0":
+    print("게임을 종료합니디")
+
+number1 = input("첫번째 숫자를 입력하세요")
+number2 = input("두번째 숫자를 입력하세요")
+operator = input("연산자를 입력하세요 ")
+
+if number1.isdigit() and number2.isdigit():
+
+
+    if operator == "+":
+        print(int(number1) + int(number2))
+    elif operator == "-":
+        print(int(number1) - int(number2))
+    elif operator == "*":
+        print(int(number1) * int(number2))
+    elif operator == "/":
+        print(int(number1) / int(number2))
+    else:
+        print("잘못된 입력입니다")
+
+else:
+    print("숫자가 아닌 입력을 했습니다")
