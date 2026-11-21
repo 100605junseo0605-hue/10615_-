@@ -1,3 +1,16 @@
+def retrieve_total_movie_views():
+    user_input = input("장르를 선택ㅎㅏ세요")
+    print("[평점",user_input,"이상 영화")
+    for movie in movies:
+        if movie["rating"]> user_input:
+            print("- ", movie["title"])
+def retrieve_max_view_movie():
+def retrieve_rating():
+    user_input = int(input("평점 몇 이상의 영화를 조회하시겠습니까?"))
+    print("[평점",user_input," 이상 영화]")
+    for movie in movies:
+        if movie["rating"] > user_input:
+            print("- ", movie["title"])
 
 movies = [
     {"title": "인사이드 아웃 2", "genre": "애니메이션", "rating": 9.0, "views": 1500},
@@ -6,7 +19,6 @@ movies = [
     {"title": "스즈메의 문단속", "genre": "애니메이션", "rating": 8.8, "views": 1300},
     {"title": "범죄도시 4", "genre": "액션", "rating": 8.1, "views": 2500}
 ]
-
 
 print("[평점 8.5 이상 영화]")
 for movie in movies:
@@ -28,6 +40,11 @@ for movie in movies:
         max_title = movie["title"]
 print("[최다 조회수의 영화]")
 print(max_title, ":", max_views)
+
+
+def retrieve_rating():
+    pass
+
 
 while True:
     print("====================")
